@@ -211,6 +211,7 @@ while player.is_dead() is False:
     inhabitant = current_city.get_enemy()
     if inhabitant is not None:
         inhabitant.describe()
+        inhabitant.get_status()
 
     friend = current_city.get_friend()
     if friend is not None:
