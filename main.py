@@ -258,6 +258,7 @@ while player.is_dead() is False:
                     defeated = inhabitant.get_defeated()
                     if defeated == 9:
                         print("Congratulations, you have vanquished the enemy horde!")
+                        print("Glory to Ukraine!")
                         player.damage(100)
                     else:
                         print(f"Enemies left: {9-defeated}")
