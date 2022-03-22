@@ -269,8 +269,7 @@ while player.is_dead() is False:
                         print("That's the end of the game")
                     player.damage(inhabitant.attack)
                     if player.my_health() > 0:
-                        print(f"Your health: {player.my_health()}")
-                        print(f"Enemies left: {9-defeated}")
+                        print(f"Your health: {player.my_health()}"
             else:
                 print("You don't have a " + fight_with)
         else:
