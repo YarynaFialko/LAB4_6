@@ -225,7 +225,10 @@ while player.is_dead() is False:
 
     if command in ["north", "south", "east", "west"]:
         # Move in the given direction
-        current_city = current_city.move(command)
+        try:
+            current_city = current_city.move(command)
+        except KeyError:
+            print("There is no city in the direction.")
     elif command == "talk":
         # Talk to a friend
         if friend is not None:
