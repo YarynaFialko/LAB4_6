@@ -19,4 +19,5 @@ The player is able to survive attacks most of the enemies, but will unevitably d
 ![image](https://user-images.githubusercontent.com/92580927/159459412-8ee8f8b2-a101-4216-993f-1024f3837842.png)
 
 
-The mission is to defeat all the enemies. 
+The mission is to defeat all the enemies. After each fight the payer will be informed on how many enemies is left.
+![image](https://user-images.githubusercontent.com/92580927/159465826-f928d639-0f86-4658-89f0-54ca81efc9df.png)
