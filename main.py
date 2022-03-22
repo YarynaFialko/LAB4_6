@@ -228,7 +228,7 @@ while player.is_dead() is False:
         try:
             current_city = current_city.move(command)
         except KeyError:
-            print("There is no city in the direction.")
+            print("There is no cities in the direction.")
     elif command == "talk":
         # Talk to a friend
         if friend is not None:
