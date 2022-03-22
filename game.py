@@ -102,7 +102,7 @@ class Person:
 class Enemy(Person):
     """Stores a data about an enemy."""
 
-    def __init__(self, name, description, conversation=None, weakness=None, city=None):
+    def __init__(self, name, description, conversation=None, weakness=None, city=None, status=None):
         """
         Receives input data of the enemy.
         >>> tabitha = Enemy("Tabitha", "An enormous spider with countless eyes and furry legs.")
@@ -114,6 +114,7 @@ class Enemy(Person):
         super().__init__(name, description, conversation, city)
         self.weakness = weakness
         self.attack = 30
+        self.status = "enemy"
 
     def set_weakness(self, weakness):
         """
@@ -142,19 +143,24 @@ class Enemy(Person):
         self.city.defeated.append(self.name)
         return len(self.city.defeated)
 
+    def get_status(self):
+        """Prints status of the enemy"""
+        print(f"Status: {self.status}")
+
 
 class Boss(Enemy):
     """The most dangerous enemy."""
 
-    def __init__(self, name, description, conversation=None, weakness=None, city=None):
+    def __init__(self, name, description, conversation=None, weakness=None, city=None, status=None):
         """
         Receives information about the boss.
         >>> putin = Boss("putin", "A bloody dictator")
         >>> putin.attack
         100
         """
-        super().__init__(name, description, conversation, weakness, city)
+        super().__init__(name, description, conversation, weakness, city, status)
         self.attack = 100
+        self.status = "boss"
 
 
 class Friend(Person):
