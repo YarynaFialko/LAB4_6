@@ -252,16 +252,21 @@ while player.is_dead() is False:
                     print("Hooray, you won the fight!")
                     backpack.remove(fight_with)
                     current_city.enemy = None
-                    if inhabitant.get_defeated() == 9:
+                    defeated = inhabitant.get_defeated()
+                    if defeated == 9:
                         print("Congratulations, you have vanquished the enemy horde!")
                         player.damage(100)
+                    else:
+                        print(f"Enemies left: {9-defeated}")
                 else:
                     # What happens if you lose?
                     print("Oh dear, you lost the fight.")
                     if (player.health - inhabitant.attack) <= 0:
                         print("That's the end of the game")
                     player.damage(inhabitant.attack)
-                    print(f"Your health: {player.my_health()}")
+                    if player.my_health() > 0:
+                        print(f"Your health: {player.my_health()}")
+                        print(f"Enemies left: {9-defeated}")
             else:
                 print("You don't have a " + fight_with)
         else:
